@@ -29,6 +29,9 @@ class StateManager {
   private messages: Array<Message> = [];
   private attachments: Array<Attachment> = [];
 
+  // prevents direct instantiation
+  private constructor() {}
+
   static getInstance(): StateManager {
     if (!this.instance) {
       this.instance = new StateManager();
